@@ -1,0 +1,5 @@
+<p><%= user.username %></p>
+<div style="border: solid black; margin: 20px">
+  <% user.guilds.forEach((guild) => { %> <%- include('components/guild',{guild})
+  %> <%})%>
+</div>

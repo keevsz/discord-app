@@ -1,0 +1,21 @@
+<div>
+  <h1><%- guild.name %></h1>
+  <h1><%- guild.id %></h1>
+  <% if(String(guild.icon).substring(0,2)==='a_' ) { %>
+  <img
+    src="https://cdn.discordapp.com/icons/<%= guild.id %>/<%= guild.icon %>.gif"
+  />
+  <% } else { %>
+  <img
+    src="https://cdn.discordapp.com/icons/<%= guild.id %>/<%= guild.icon %>.png"
+  />
+  <% } %> <% if(guild.owner){ %>
+  <span>Owner</span>
+  <% } %>
+
+  <ul>
+    <% guild.features.forEach(feature=>{ %>
+    <li><%= feature%></li>
+    <%})%>
+  </ul>
+</div>
