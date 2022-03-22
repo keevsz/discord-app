@@ -12,7 +12,7 @@ router.get(
   })
 )
 router.get("/logout", isAuthorized, (req, res) => {
-  req.logout
+  req.logout()
   res.redirect("/")
 })
 module.exports = router
